@@ -1,0 +1,3 @@
+project=invoice_clerk
+test=rspec
+template=erb

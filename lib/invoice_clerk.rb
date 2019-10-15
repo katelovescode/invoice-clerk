@@ -1,0 +1,2 @@
+module InvoiceClerk
+end
