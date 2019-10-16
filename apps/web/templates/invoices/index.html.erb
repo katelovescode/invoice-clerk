@@ -1,0 +1,15 @@
+<h2>Invoices</h2>
+
+<% if invoices.any? %>
+  <div id="invoices">
+    <% invoices.each do |invoice| %>
+      <div class="invoice">
+        <h3>Invoice #<%= invoice.id %></h3>
+        <p><%= "%.2f" % invoice.amount %></p>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p class="placeholder">There are no invoices yet.</p>
+<% end %>
+<a href="/invoices/new">Create a new invoice</a>

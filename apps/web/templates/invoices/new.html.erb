@@ -1,0 +1,23 @@
+<h2>Add invoice</h2>
+<% unless params.valid? %>
+  <div class="errors">
+    <h3>There was a problem with your submission</h3>
+    <ul>
+      <% params.error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%=
+  form_for :invoice, routes.invoices_path do
+    div class: 'input' do
+      label      :amount
+      text_field :amount
+    end
+
+    div class: 'controls' do
+      submit 'Create Invoice'
+    end
+  end
+%>
